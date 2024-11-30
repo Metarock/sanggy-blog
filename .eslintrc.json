@@ -1,3 +1,15 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript", "plugin:@typescript-eslint/recommended", "plugin:import/typescript", "plugin:tailwindcss/recommended", "plugin:prettier/recommended"],
+  "plugins": ["@typescript-eslint", "import", "tailwindcss"],
+  "rules": {
+    "eslint-plugin-import/no-default-export": "error" 
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": ["tsconfig.json"]
+      }
+    },
+    "import/core-modules": ["__STATIC_CONTENT_MANIFEST"]
+  }
 }
