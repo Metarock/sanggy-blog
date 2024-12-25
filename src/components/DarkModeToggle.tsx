@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Button } from '@/components/ui/button';
+import { Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 export const DarkModeToggle = () => {
   const { setTheme, resolvedTheme } = useTheme();
@@ -13,7 +13,7 @@ export const DarkModeToggle = () => {
   }, []);
 
   const toggleDarkMode = () => {
-    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
 
   // Render nothing on the server
@@ -21,11 +21,15 @@ export const DarkModeToggle = () => {
 
   // Once the component has mounted, we can safely render
   return (
-    <Button variant="ghost" onClick={toggleDarkMode} className="p-2">
-      {resolvedTheme === "dark" ? (
-        <Moon className="w-4 h-4" />
+    <Button
+      variant="ghost"
+      onClick={toggleDarkMode}
+      className="p-2"
+    >
+      {resolvedTheme === 'dark' ? (
+        <Moon className="size-4" />
       ) : (
-        <Sun className="w-4 h-4" />
+        <Sun className="size-4" />
       )}
     </Button>
   );

@@ -1,9 +1,30 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript", "plugin:@typescript-eslint/recommended", "plugin:import/typescript", "plugin:tailwindcss/recommended", "plugin:prettier/recommended"],
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:tailwindcss/recommended",
+    "plugin:prettier/recommended"
+  ],
   "plugins": ["@typescript-eslint", "import", "tailwindcss"],
   "rules": {
-    "eslint-plugin-import/no-default-export": "error" 
+    "import/no-default-export": "error"
   },
+  "overrides": [
+    // App router
+    {
+      "files": [
+        "src/pages/**/*",
+        "src/app/**/{page,layout,not-found,robots,sitemap,route}.{js,ts,jsx,tsx,mdx}",
+        "src/middleware.ts",
+        "src/loaders/**/*"
+      ],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ],
   "settings": {
     "import/resolver": {
       "typescript": {

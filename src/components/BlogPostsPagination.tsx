@@ -6,18 +6,18 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from '@/components/ui/pagination';
 
 export const BlogPostsPagination = ({
   pagination,
-  basePath = "/?page=",
+  basePath = '/?page=',
   numSiblingPages = 2,
 }: {
   basePath?: string;
   numSiblingPages?: number;
   pagination: {
     page: number;
-    limit: number | "all";
+    limit: number | 'all';
     totalPages: number;
     nextPage: number | null;
     prevPage: number | null;
@@ -42,7 +42,7 @@ export const BlogPostsPagination = ({
         {Array.from({ length: pagination.totalPages }, (_, index) => index + 1)
           .filter(
             (pageNumber) =>
-              Math.abs(pagination.page - pageNumber) <= numSiblingPages
+              Math.abs(pagination.page - pageNumber) <= numSiblingPages,
           )
           .map((pageNumber) => (
             <PaginationItem key={pageNumber}>

@@ -7,9 +7,9 @@ import { wisp } from '@/lib/wisp';
 const Page = async ({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) => {
-  const { paramPage } = await searchParams;
+  const { page: paramPage } = await searchParams;
   const page = paramPage ? parseInt(paramPage as string) : 1;
   const result = await wisp.getPosts({ limit: 6, page });
   return (

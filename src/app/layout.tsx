@@ -1,12 +1,12 @@
-import { ThemeProvider } from "@/components/theme-provider";
-import { config } from "@/config";
-import { signOgImageUrl } from "@/lib/og-image";
-import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { ThemeProvider } from '@/components/theme-provider';
+import { config } from '@/config';
+import { signOgImageUrl } from '@/lib/og-image';
+import { cn } from '@/lib/utils';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
-const fontSans = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const fontSans = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
   title: {
@@ -32,11 +32,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+    >
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-6xl m-auto",
-          fontSans.variable
+          'm-auto min-h-screen max-w-6xl bg-background font-sans antialiased',
+          fontSans.variable,
         )}
       >
         <ThemeProvider
