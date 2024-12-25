@@ -1,9 +1,9 @@
-import { config } from "@/config";
+import { config } from '@/config';
 import {
   buildWispClient,
   GetPostsResult,
   GetPostResult,
-} from "@wisp-cms/client";
+} from '@wisp-cms/client';
 
 export const wisp = buildWispClient({
   blogId: config.wisp.blogId,

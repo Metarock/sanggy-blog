@@ -1,8 +1,8 @@
-import { config } from "@/config";
-import type { MetadataRoute } from "next";
-import urlJoin from "url-join";
+import { config } from '@/config';
+import type { MetadataRoute } from 'next';
+import urlJoin from 'url-join';
 
-const staticPaths = ["about"];
+const staticPaths = ['about'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = staticPaths.map((path) => ({

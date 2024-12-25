@@ -1,19 +1,19 @@
-"use client";
-import { config } from "@/config";
-import { Rss } from "lucide-react";
-import Link from "next/link";
-import { FunctionComponent } from "react";
-import { DarkModeToggle } from "./DarkModeToggle";
-import { Button } from "./ui/button";
+'use client';
+import { config } from '@/config';
+import { Rss } from 'lucide-react';
+import Link from 'next/link';
+import { FunctionComponent } from 'react';
+import { DarkModeToggle } from './DarkModeToggle';
+import { Button } from './ui/button';
 
 export const Footer: FunctionComponent = () => {
   return (
-    <section className="mt-8 md:mt-16 mb-12">
+    <section className="mb-12 mt-8 md:mt-16">
       <div className="flex items-center justify-between">
         <div className="text-sm text-muted-foreground">
           © {config.blog.copyright} {new Date().getFullYear()}
         </div>
-        <div className="text-xs text-muted-foreground hidden lg:block">
+        <div className="hidden text-xs text-muted-foreground lg:block">
           <Link
             href={`https://wisp.blog/?utm_source=next-js-template&utm_medium=web&utm_campaign=${config.baseUrl}`}
           >
@@ -22,8 +22,11 @@ export const Footer: FunctionComponent = () => {
         </div>
         <div>
           <Link href="/rss">
-            <Button variant="ghost" className="p-2">
-              <Rss className="w-4 h-4" />
+            <Button
+              variant="ghost"
+              className="p-2"
+            >
+              <Rss className="size-4" />
             </Button>
           </Link>
           <DarkModeToggle />

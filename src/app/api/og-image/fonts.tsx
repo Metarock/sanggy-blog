@@ -1,4 +1,4 @@
-import { config } from "../../../config";
+import { config } from '../../../config';
 
 export type FontMap = Record<
   string,
@@ -6,28 +6,28 @@ export type FontMap = Record<
     data: Buffer | ArrayBuffer;
     name: string;
     weight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
-    style?: "normal" | "italic";
+    style?: 'normal' | 'italic';
     lang?: string;
   }
 >;
 let loadedFonts: FontMap | null = null;
 const loadFontsRaw = async (): Promise<FontMap> => {
   return {
-    "inter-semibold": {
-      name: "Inter",
+    'inter-semibold': {
+      name: 'Inter',
       data: await fetch(
-        new URL("fonts/Inter-SemiBold.ttf", config.baseUrl)
+        new URL('fonts/Inter-SemiBold.ttf', config.baseUrl),
       ).then((res) => res.arrayBuffer()),
       weight: 600,
-      style: "normal",
+      style: 'normal',
     },
-    "inter-regular": {
-      name: "Inter",
+    'inter-regular': {
+      name: 'Inter',
       data: await fetch(
-        new URL("fonts/Inter-Regular.ttf", config.baseUrl)
+        new URL('fonts/Inter-Regular.ttf', config.baseUrl),
       ).then((res) => res.arrayBuffer()),
       weight: 400,
-      style: "normal",
+      style: 'normal',
     },
   };
 };
