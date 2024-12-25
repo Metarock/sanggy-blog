@@ -39,7 +39,7 @@ const Page = async ({
       <Header />
       <Link href="/">
         <Badge className="px-2 py-1">
-          <CircleX className="mr-2 inline-block h-4 w-4" />
+          <CircleX className="mr-2 inline-block size-4" />
           Posts tagged with <strong className="mx-2">#{slug}</strong>{' '}
         </Badge>
       </Link>

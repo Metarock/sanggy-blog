@@ -3,8 +3,8 @@ export const revalidate = 60 * 60; // 1 hour
 import { NextResponse } from 'next/server';
 import RSS from 'rss';
 import urlJoin from 'url-join';
+import { config } from '../../config';
 import { wisp } from '../../lib/wisp';
-import { config } from '@/config';
 
 const baseUrl = config.baseUrl;
 
