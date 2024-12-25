@@ -1,9 +1,9 @@
-export const revalidate = 60 * 60; // 1 hour
+export const revalidate = 3600; // 1 hour
 
+import { config } from '@/config';
 import { NextResponse } from 'next/server';
 import RSS from 'rss';
 import urlJoin from 'url-join';
-import { config } from '../../config';
 import { wisp } from '../../lib/wisp';
 
 const baseUrl = config.baseUrl;
