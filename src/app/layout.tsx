@@ -4,6 +4,7 @@ import { signOgImageUrl } from '@/lib/og-image';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 
 const fontSans = Inter({ subsets: ['latin'], variable: '--font-sans' });
@@ -36,6 +37,11 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
     >
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3131105222203989"
+        crossOrigin="anonymous"
+      />
       <body
         className={cn(
           'm-auto min-h-screen max-w-6xl bg-background font-sans antialiased',
