@@ -14,6 +14,15 @@ const compat = new FlatCompat({
 const configs = [
   ...compat.config({
     root: true,
+    ignorePatterns: [
+      'node_modules',
+      '.next',
+      'out',
+      '/pnpm-lock.yaml',
+      '/yarn.lock',
+      '/.git',
+      '/.cache',
+    ],
     extends: [
       'plugin:prettier/recommended',
       'plugin:tailwindcss/recommended',
@@ -30,12 +39,16 @@ const configs = [
     overrides: [
       // App router
       {
+        files: ['*.ts', '*.tsx', '*.js'],
+        parser: '@typescript-eslint/parser',
+      },
+      {
         files: [
           'src/pages/**/*',
           'src/app/**/{page,layout,not-found,robots,sitemap,route}.{js,ts,jsx,tsx,mdx}',
           'src/middleware.ts',
           'src/loaders/**/*',
-          'eslint.config.mjs',
+          '{eslint,prettier}.config.mjs',
         ],
         rules: {
           'import/no-default-export': 'off',
