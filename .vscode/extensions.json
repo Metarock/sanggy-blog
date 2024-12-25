@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "editorconfig.editorconfig",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "github.copilot",
+    "github.vscode-github-actions",
+    "mikestead.dotenv",
+    "streetsidesoftware.code-spell-checker",
+    "vscode-icons-team.vscode-icons"
+  ]
+}
