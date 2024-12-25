@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     template: config.blog.metadata.title.template,
   },
   description: config.blog.metadata.description,
+  alternates: {
+    canonical: config.baseUrl,
+  },
   openGraph: {
     title: config.blog.metadata.title.default,
     description: config.blog.metadata.description,
