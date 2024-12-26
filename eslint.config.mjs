@@ -22,6 +22,8 @@ const configs = [
       '/yarn.lock',
       '/.git',
       '/.cache',
+      '/tailwind.config.ts',
+      '/postcss.config.cjs',
     ],
     extends: [
       'plugin:prettier/recommended',
@@ -48,7 +50,7 @@ const configs = [
           'src/app/**/{page,layout,not-found,robots,sitemap,route}.{js,ts,jsx,tsx,mdx}',
           'src/middleware.ts',
           'src/loaders/**/*',
-          '{eslint,prettier}.config.mjs',
+          '{eslint,prettier,tailwind,postcss,next}.config.{mjs,ts}',
         ],
         rules: {
           'import/no-default-export': 'off',
