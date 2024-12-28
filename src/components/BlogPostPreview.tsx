@@ -12,10 +12,10 @@ export const BlogPostPreview: FunctionComponent<{
   return (
     <div className="break-words">
       <Link href={`/blog/${post.slug}`}>
-        <div className="relative aspect-[16/9]">
+        <div className="relative aspect-[16/9] overflow-hidden rounded-md">
           <Image
             alt={post.title}
-            className="object-cover"
+            className="object-cover transition-all duration-300 hover:scale-105"
             src={post.image || '/images/placeholder.webp'}
             fill
             priority
