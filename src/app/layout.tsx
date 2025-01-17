@@ -28,6 +28,9 @@ export const metadata: Metadata = {
       }),
     ],
   },
+  verification: {
+    google: config.google.verification,
+  },
 };
 
 export default function RootLayout({
