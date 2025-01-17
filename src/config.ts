@@ -29,6 +29,9 @@ export const buildConfig = () => {
     wisp: {
       blogId,
     },
+    google: {
+      verification: process.env.GOOGLE_VERIFICATION,
+    },
   };
 };
 
